@@ -77,7 +77,7 @@ h1{
 
 /*home page background image formatting*/
 #homeBody{
-    background-image: url(photos/fishing.jpg);
+    background-image: url(Photos/fishing.jpg);
     background-size:cover;
     background-repeat: no-repeat;
 }
