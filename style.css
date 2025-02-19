@@ -160,41 +160,6 @@ h1{
     display:flex;
     justify-content: center;
 }
-/* user like icon*/
-.heart-shape{
-    margin-top:30px;
-    margin-left:20px;
-    position: relative;
-    width: 40px;
-    height: 40px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    border-width:0;
-    background-color: rgb(199, 60, 32);
-  }
-  .heart-shape:before,
-  .heart-shape:after{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    content: '';
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    background-color: rgba(199, 60, 32);
-  }
-  .heart-shape:before{
-    bottom: 0px;
-    left: -20px;
-  }
-  .heart-shape:after{
-    top: -20px;
-    right: 0px;
-  }
 
 /*testing
 
