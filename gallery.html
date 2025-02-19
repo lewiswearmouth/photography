@@ -1,70 +1,5 @@
 <!DOCTYPE html>
-<script>
-//initializing variables for user liking feature
-var hawaiiLikes = "hawaiiLikes";
-var franceLikes = "franceLikes";
-var englandLikes = "englandLikes";
-var pennLikes = "pennLikes";
-var maineLikes = "maineLikes";
-var scotlandLikes = "scotlandLikes";
-var marylandLikes = "marylandLikes";
 
-var hawaiiLikeNum = 0;
-var franceLikeNum = 0;
-var englandLikeNum = 0;
-var pennLikeNum = 0;
-var maineLikeNum = 0;
-var scotlandLikeNum = 0;
-var marylandLikeNum = 0;
-
-//user liking array storing number of likes across gallery
-var likeArray = 
-[hawaiiLikeNum,franceLikeNum,englandLikeNum,pennLikeNum,maineLikeNum,scotlandLikeNum,marylandLikeNum];
-
-//function that increases number of likes
-incrementLike = function(likeID, likeNum){
-
-  var clickNum = document.getElementById(likeID).innerHTML;
-  clickNum = parseInt(clickNum);
-  clickNum++;
-  document.getElementById(likeID).innerHTML = clickNum;
-  
-  if (likeNum === 'hawaiiLikeNum'){
-    likeArray[0]++;
-    //console.log('test');
-  }
-  if (likeNum === 'franceLikeNum'){
-    likeArray[1]++;
-    //console.log('test');
-  }
-  if (likeNum === 'englandLikeNum'){
-    likeArray[2]++;
-    //console.log('test');
-  }
-  if (likeNum === 'pennLikeNum'){
-    likeArray[3]++;
-    //console.log('test');
-  }
-  if (likeNum === 'maineLikeNum'){
-    likeArray[4]++;
-    //console.log('test');
-  }
-  if (likeNum === 'scotlandLikeNum'){
-    likeArray[5]++;
-    //console.log('test');
-    }
-}
-
-//calculating total number of likes on gallery
-totalLikes = function(array){
-    var sum = 0;
-    for (let i = 0; i<array.length; i++){
-        sum+=array[i];
-    }
-    return sum;
-
-}
-</script>
 <html>
     <head>
         <meta charset="utf-8">
@@ -95,121 +30,88 @@ totalLikes = function(array){
     <p id ="subheaderGallery">A collection of photos from my travels, captured through the lens of my DJI Mavic Mini.</p>
     
     <div class="hawaii">
-    <!--hawaii map and photos-->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828071.821738936!2d-159.74952554887096!3d20.450755926464137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bffdb064f79e005%3A0x4b7782d274cc8628!2sHawaii!5e0!3m2!1sen!2sus!4v1671501513171!5m2!1sen!2sus" 
-    class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <img class ="photos" src ="Photos/aerialBeach.jpg" width="465">
-    <img class ="photos" src="Photos/beach.jpg" width="465">
-    <img class ="photos" src="Photos/beachBehind.jpg" width="465">
-    <img class ="photos" src="Photos/boat.jpg" width = 465>
-    <img class ="photos" src="Photos/fishing.jpg" width = 465>
-    <img class ="photos" src="Photos/rocks.JPG" width="465">
-    <img class ="photos" src="Photos/sunsetFigure.jpg" width="465">
-    <div id="caption">
-    <!--user liking feature-->
-        <button class="heart-shape" onclick="incrementLike(hawaiiLikes, 'hawaiiLikeNum')"></button>
-        <div id="hawaiiLikes">0</div>
+      <!--hawaii map and photos-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828071.821738936!2d-159.74952554887096!3d20.450755926464137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7bffdb064f79e005%3A0x4b7782d274cc8628!2sHawaii!5e0!3m2!1sen!2sus!4v1671501513171!5m2!1sen!2sus" 
+      class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <img class ="photos" src ="Photos/aerialBeach.jpg" width="465">
+      <img class ="photos" src="Photos/beach.jpg" width="465">
+      <img class ="photos" src="Photos/beachBehind.jpg" width="465">
+      <img class ="photos" src="Photos/boat.jpg" width = 465>
+      <img class ="photos" src="Photos/fishing.jpg" width = 465>
+      <img class ="photos" src="Photos/rocks.JPG" width="465">
+      <img class ="photos" src="Photos/sunsetFigure.jpg" width="465">
+      <hr>
     </div>
-    <hr>
-    </div>
-
+  
     <div class="france">
-    <!--france map and photos-->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5661884.831192729!2d-2.437266384553212!3d46.138952473220485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54a02933785731%3A0x6bfd3f96c747d9f7!2sFrance!5e0!3m2!1sen!2sus!4v1671501492422!5m2!1sen!2sus" 
-    class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <img class ="photos" src="Photos/boatSunset.jpg" width="465">
-    <img class ="photos" src="Photos/franceFlag.jpg" width="465">
-    <img class ="photos" src="Photos/louvre.jpg" width="465">
-    <img class ="photos" src="Photos/notreDame.jpg" width="465">
-    <img class ="photos" src="Photos/parisRoad.jpg" width="465">
-    <img class ="photos" src="Photos/parisSunset.jpg" width="465">
-    <div>
-    <!--user liking feature-->
-        <button class="heart-shape" onclick="incrementLike(franceLikes, 'franceLikeNum')"></button>
-        <div id=franceLikes>0</div>
+      <!--france map and photos-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5661884.831192729!2d-2.437266384553212!3d46.138952473220485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54a02933785731%3A0x6bfd3f96c747d9f7!2sFrance!5e0!3m2!1sen!2sus!4v1671501492422!5m2!1sen!2sus" 
+      class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <img class ="photos" src="Photos/boatSunset.jpg" width="465">
+      <img class ="photos" src="Photos/franceFlag.jpg" width="465">
+      <img class ="photos" src="Photos/louvre.jpg" width="465">
+      <img class ="photos" src="Photos/notreDame.jpg" width="465">
+      <img class ="photos" src="Photos/parisRoad.jpg" width="465">
+      <img class ="photos" src="Photos/parisSunset.jpg" width="465">
+      <hr>
     </div>
-    <hr>
-    </div>
-
+  
     <div class="england">
-    <!--england map and photos-->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4944790.674438757!2d-6.814196201069766!3d52.760182813394216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d0a98a6c1ed5df%3A0xf4e19525332d8ea8!2sEngland%2C%20UK!5e0!3m2!1sen!2sus!4v1671501439456!5m2!1sen!2sus" 
-    class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <img class ="photos" src="Photos/bridgeCambridge.jpg" width="465">
-    <img class ="photos" src="Photos/waterCambridge.jpg" width="465">
-    <img class ="photos" src="Photos/cambridge.jpg" width="465">
-    <img class ="photos" src="Photos/cambridgeWater.jpg" width="465">
-    <img class ="photos" src="Photos/carCambridge.jpg" width="465">
-    <img class ="photos" src="Photos/londonBoats.jpg" width="465">
-    <img class ="photos" src="Photos/londonBridge.jpg" width="465">
-    <img class ="photos" src="Photos/wedding.jpg" width="465">
-    <img class ="photos" src="Photos/trafford.jpg" width="465">
-    <div>
-    <!--user liking feature-->
-        <button class="heart-shape" id="incrementLike" onclick="incrementLike(englandLikes, 'englandLikeNum')"></button>
-        <div id=englandLikes>0</div>
+      <!--england map and photos-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4944790.674438757!2d-6.814196201069766!3d52.760182813394216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d0a98a6c1ed5df%3A0xf4e19525332d8ea8!2sEngland%2C%20UK!5e0!3m2!1sen!2sus!4v1671501439456!5m2!1sen!2sus" 
+      class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <img class ="photos" src="Photos/bridgeCambridge.jpg" width="465">
+      <img class ="photos" src="Photos/waterCambridge.jpg" width="465">
+      <img class ="photos" src="Photos/cambridge.jpg" width="465">
+      <img class ="photos" src="Photos/cambridgeWater.jpg" width="465">
+      <img class ="photos" src="Photos/carCambridge.jpg" width="465">
+      <img class ="photos" src="Photos/londonBoats.jpg" width="465">
+      <img class ="photos" src="Photos/londonBridge.jpg" width="465">
+      <img class ="photos" src="Photos/wedding.jpg" width="465">
+      <img class ="photos" src="Photos/trafford.jpg" width="465">
+      <hr>
     </div>
-    <hr>
+  
+      <div class="penn">
+      <!--pennsylvania map and photos-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6189823.290669927!2d-86.8597062354658!3d40.75378379580794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882d80261e32e589%3A0xc24621475022b43d!2sPennsylvania!5e0!3m2!1sen!2sus!4v1671501552973!5m2!1sen!2sus" class="map" style="border:0;" 
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <img class ="photos" src="Photos/bridge.jpg" width="465">
+      <img class ="photos" src="Photos/phiRoad.jpg" width="465">
+      <img class ="photos" src="Photos/phiRoads.jpg" width="465">
+      <img class ="photos" src="Photos/roads.jpg" width="465"> 
+      <hr>
     </div>
-
-    <div class="penn">
-    <!--pennsylvania map and photos-->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6189823.290669927!2d-86.8597062354658!3d40.75378379580794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882d80261e32e589%3A0xc24621475022b43d!2sPennsylvania!5e0!3m2!1sen!2sus!4v1671501552973!5m2!1sen!2sus" class="map" style="border:0;" 
-    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <img class ="photos" src="Photos/bridge.jpg" width="465">
-    <img class ="photos" src="Photos/phiRoad.jpg" width="465">
-    <img class ="photos" src="Photos/phiRoads.jpg" width="465">
-    <img class ="photos" src="Photos/roads.jpg" width="465">
-    <div>
-        <button class="heart-shape" id="incrementLike" onclick="incrementLike(pennLikes, 'pennLikeNum')"></button>
-        <div id=pennLikes>0</div>
-    </div>
-    <hr>
-    </div>
-
+  
     <div class="maine">
-    <!--maine map and photos-->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880332.759982152!2d-71.22813997148515!3d45.17039429103405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb01dde1d538ad5%3A0xd679cc6f6720a8d0!2sMaine!5e0!3m2!1sen!2sus!4v1671501675490!5m2!1sen!2sus" 
-    class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <img class ="photos" src="Photos/fog.JPG" width="465">
-    <img class ="photos" src="Photos/lighthouse.JPG" width="465">
-    <div>
-    <!--user liking feature-->
-        <button class="heart-shape" id="incrementLike" onclick="incrementLike(maineLikes, 'maineLikeNum')"></button>
-        <div id=maineLikes>0</div>
+      <!--maine map and photos-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880332.759982152!2d-71.22813997148515!3d45.17039429103405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb01dde1d538ad5%3A0xd679cc6f6720a8d0!2sMaine!5e0!3m2!1sen!2sus!4v1671501675490!5m2!1sen!2sus" 
+      class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <img class ="photos" src="Photos/fog.JPG" width="465">
+      <img class ="photos" src="Photos/lighthouse.JPG" width="465">
+      <hr>
     </div>
-    <hr>
-    </div>
-
+  
     <div class="scotland">
-    <!--scotland map and photos-->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4369461.020177654!2d-9.171797278559621!3d57.67354200357113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4861e2c403f2a19f%3A0xe7c1fad809c30714!2sScotland%2C%20UK!5e0!3m2!1sen!2sus!4v1671501709703!5m2!1sen!2sus" 
-    class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <img class ="photos" src="Photos/edinburgh.jpg" width="465">
-    <img class ="photos" src="Photos/murrayfield.jpg" width="465">
-    <img class ="photos" src="Photos/sunsetEdin.jpg" width="465">
-    <div>
-    <!--user liking feature-->
-        <button class="heart-shape" id="incrementLike" onclick="incrementLike(scotlandLikes, 'scotlandLikeNum')"></button>
-        <div id=scotlandLikes>0</div>
+      <!--scotland map and photos-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4369461.020177654!2d-9.171797278559621!3d57.67354200357113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4861e2c403f2a19f%3A0xe7c1fad809c30714!2sScotland%2C%20UK!5e0!3m2!1sen!2sus!4v1671501709703!5m2!1sen!2sus" 
+      class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <img class ="photos" src="Photos/edinburgh.jpg" width="465">
+      <img class ="photos" src="Photos/murrayfield.jpg" width="465">
+      <img class ="photos" src="Photos/sunsetEdin.jpg" width="465">
+      <hr>
     </div>
+  
+    <div class="maryland">
+      <!--maryland map and photos-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98510.06622566741!2d-79.32138295!3d39.5045677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89caaa7f992c407b%3A0x536ce3091c13183f!2sDeep%20Creek%20Lake!5e0!3m2!1sen!2sus!4v1722963277204!5m2!1sen!2sus"
+      class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <img class ="photos" src ="Photos/lakeBoat.jpeg" width="465">
+      <img class ="photos" src="Photos/kayak.jpeg" width="465">
+      <img class ="photos" src="Photos/lakeTree.jpeg" width="465"> 
+      <hr>
     </div>
-
-  <div class="maryland">
-    <!--maryland map and photos-->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98510.06622566741!2d-79.32138295!3d39.5045677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89caaa7f992c407b%3A0x536ce3091c13183f!2sDeep%20Creek%20Lake!5e0!3m2!1sen!2sus!4v1722963277204!5m2!1sen!2sus"
-    class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <img class ="photos" src ="Photos/lakeBoat.jpeg" width="465">
-    <img class ="photos" src="Photos/kayak.jpeg" width="465">
-    <img class ="photos" src="Photos/lakeTree.jpeg" width="465">
-    <div id="caption">
-    <!--user liking feature-->
-        <button class="heart-shape" onclick="incrementLike(marylandLikes, 'marylandLikeNum')"></button>
-        <div id="marylandLikes">0</div>
-    </div>
-    <hr>
-    </div>
-    
+      
 
 </body>
 </html>
